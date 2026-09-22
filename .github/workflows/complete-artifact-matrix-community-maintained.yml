@@ -562,23 +562,10 @@ concurrency:
 
 jobs:
 
-  # additional security check
-  team_check:
-    permissions:
-      actions: write
-    name: "Team check"
-    runs-on: [ "ubuntu-latest" ]
-    steps:
-
-      - name: "Check membership"
-        uses: armbian/actions/team-check@main
-        with:
-          ORG_MEMBERS: ${{ secrets.ORG_MEMBERS }}
-          GITHUB_TOKEN: "${{ env.GH_TOKEN }}"
-          TEAM: "Release manager"
+  # team_check job removed - not needed for fork (causes GITHUB_TOKEN error with armbian org check)
 
   version_prep:
-    needs: team_check
+
     name: "Bump version"
     runs-on: ubuntu-latest
     steps:
