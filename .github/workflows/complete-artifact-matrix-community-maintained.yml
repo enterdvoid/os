@@ -624,7 +624,7 @@ jobs:
           cat "${{ steps.versionfile.outputs.file }}.json" | jq '.version' | sed "s/\"//g" > downloads/version
 
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: assets-for-download-stable
           path: downloads
@@ -872,7 +872,7 @@ jobs:
           done
 
       # Store output/info folder in a GitHub Actions artifact
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v4
         name: Upload output/info as GitHub Artifact
         with:
           name: build-info-json
@@ -2762,7 +2762,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -3173,7 +3173,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -3584,7 +3584,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -3995,7 +3995,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -4406,7 +4406,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -4817,7 +4817,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -5228,7 +5228,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -5639,7 +5639,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -6050,7 +6050,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -6461,7 +6461,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -6872,7 +6872,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -7283,7 +7283,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -7694,7 +7694,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -8105,7 +8105,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -8516,7 +8516,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -8927,7 +8927,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: output/info
@@ -9232,7 +9232,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: build-info-json
           path: build/output/info
@@ -9325,7 +9325,7 @@ jobs:
       # Download workflow artifacts
       - name: "Download all workflow run artifacts"
         if: ${{ (github.event.inputs.skipImages || 'no') != 'yes' }}
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v4
         with:
           name: assets-for-download-stable
           path: downloads
